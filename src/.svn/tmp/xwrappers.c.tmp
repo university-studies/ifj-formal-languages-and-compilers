@@ -1,0 +1,191 @@
+/**
+ * Projekt:     IFJ11
+ * Rok:         2011
+ * Subor:       xwrappers.c
+ * Autor(i):    Fridolin Pokorny
+ *
+ * Implementacia wrapperov nad kniznicnymi funkciami z libc, ktore osetruju
+ * chybove stavy.
+ *
+ * Tim:
+ *   Fridolin Pokorny   xpokor32
+ *   Pavol Loffay       xloffa00
+ *   Dusan Madarka      xmadar01
+ *   Miroslav Lisik     xlisik00
+ */
+
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <assert.h>
+
+#include "xwrappers.h"
+#include "ifj11.h"
+#include "scanner.h"
+
+static const char * xerror_str[] = {
+
+    [ERR_LEX_STRAY_CHR]         = "lex: stray character\n",
+    [ERR_LEX_MALFORMED_NUM]     = "lex: malformed number\n",
+    [ERR_LEX_BAD_ESC_SEQ]       = "lex: bad escape sequence\n",
+    [ERR_LEX_BAD_OPERATOR]      = "lex: bad operand\n",
+    [ERR_LEX_UNTERMINATED_COM]  = "lex: unterminated comment\n",
+    [ERR_LEX_UNTERMINATED_STR]  = "lex: unterminated string\n",
+
+    [ERR_SYN_UNEXP_KEY_EXP]     = "syn : unexpected keyword in expression\n",
+    [ERR_SYN_EXPR]              = "syn : syntax error in expression\n",
+    [ERR_SYN_NO_L_BRACKET]      = "syn : missing left bracket in expression\n",
+    [ERR_SYN_NO_MAIN]           = "syn: missing main() function\n",
+    [ERR_SYN_EXP_EOF]           = "syn: expected token 'EOF'\n",
+    [ERR_SYN_EXP_FUN]           = "syn: expected token 'function'\n",
+    [ERR_SYN_EXP_ID]            = "syn: expected token 'ID'\n",
+    [ERR_SYN_MAIN_LAST]         = "syn: main is not last\n",
+    [ERR_SYN_EXP_L_BRACKET]     = "syn: expected token '('\n",
+    [ERR_SYN_EXP_R_BRACKET]     = "syn: expected token ')'\n",
+    [ERR_SYN_UNEXP_TKN]         = "syn: unexpected token\n",
+    [ERR_SYN_EXP_SEMICOLON]     = "syn: expected token ';'\n",
+    [ERR_SYN_EXP_LITERAL]       = "syn: expected tokens 'number', 'string', \
+                                   'true', 'false' or 'nil'\n",
+    [ERR_SYN_EXP_ASSIGNMENT]    = "syn: expected token '='\n",
+    [ERR_SYN_EXP_DO]            = "syn: expected token 'do'\n",
+    [ERR_SYN_EXP_THEN]          = "syn: expected token 'then'\n",
+    [ERR_SYN_EXP_ID_VAR]        = "syn: expected identifier of variable\n",
+    [ERR_SYN_EXP_COMMA]         = "syn: expected token ','\n",
+
+    [ERR_SEM_BAD_ARITH_LIT]     = "sem: bad arithmetic literal type in expression\n",
+    [ERR_SEM_BAD_STRING_LIT]    = "sem: not string literal in expression\n",
+    [ERR_SEM_BAD_CMP_LIT]       = "sem: comparing bad literal types in expression\n",
+    [ERR_SEM_UNDEFINED_ID_EXPR] = "sem: undefined id in expression\n",
+    [ERR_SEM_FUNC_IN_EXPR]      = "sem: function id in expression\n",
+    [ERR_SEM_FUN_REDECLARATION] = "sem: redeclaration of function (2 function"
+                                   "can not have same id)\n",
+    [ERR_SEM_ID_COLLISION]      = "sem: collision of id names\n",
+    [ERR_SEM_ID_UNDEFINED]      = "sem: undefined id\n",
+<<<<<<< .mine
+    [ERR_SEM_MAIN_PARAM]        = "sem: main can not have parameters\n",
+=======
+    [ERR_SEM_MAIN_CALL]         = "sem: main recursion\n",
+    [ERR_SEM_STRLEN_OP]         = "sem: could not calculate string length\n",
+    [ERR_SEM_BAD_CONC]          = "sem: concatenation operand type mismatch\n",
+    [ERR_SEM_WRITE_OP]          = "sem: attemp to call write with bad param type\n",
+    [ERR_SEM_SUBSTR_OP]         = "sem: attemp to call substr with bad param type\n",
+    [ERR_SEM_BAD_CMP]           = "sem: comparing bad types\n",
+    [ERR_SEM_DIFF_CMP]          = "sem: comparing different types\n",
+    [ERR_SEM_BAD_ARITH_OP]      = "sem: bad arithmetic operands\n",
+    [ERR_SEM_READ_OP]           = "sem: bad read operand\n",
+    [ERR_SEM_MAIN_PARAM]        = "sem: main can not have parameters\n",
+    [ERR_SEM_READ_PARAM]        = "sem: read without parameters\n",
+    [ERR_SEM_WRITE_PARAM]       = "sem: write without parameters\n",
+>>>>>>> .r244
+
+    [ERR_INT_STRLEN_OP]         = "sem: could not calculate string length\n",
+    [ERR_INT_BAD_CONC]          = "sem: concatenation operand type mismatch\n",
+    [ERR_INT_WRITE_OP]      = "int: attemp to call write with bad param type\n",
+    [ERR_INT_SUBSTR_OP]     = "int: attemp to call substr with bad param type\n",
+    [ERR_INT_BAD_CMP]       = "int: comparing bad types\n",
+    [ERR_INT_DIFF_CMP]      = "int: comparing different types\n",
+    [ERR_INT_BAD_ARITH_OP]  = "int: bad arithmetic operands\n",
+    [ERR_INT_READ_OP]       = "int: bad read operand\n",
+
+    [ERR_INT_NUM_RANGE]     = "int: numeric variable out of range\n",
+    [ERR_INT_READ_NUM]      = "int: no input to be read\n",
+
+    [ERR_MY_PSTACK_OVERF]           = "my: pstack owerflow\n",
+    [ERR_MY_PSTACK_BAD_DATA]        = "my: pstack invalid data\n",
+    [ERR_MY_TOKEN]                  = "my: unknow token\n",
+    [ERR_MY_ALLOC]                  = "my: out of memory\n",
+};
+
+static const char * xwarning_str[] = {
+    [WAR_IGNORE_RESULT]     = "ignoring return value of build in function\n",
+};
+
+/**
+ * Wrapper poskytujuci vypis chybovych a varovnych hlasok na standardny chybovy
+ * vystup a implicitne zalomi riadok.
+ * @param - printf-like arguments
+ * @return - void
+ */
+void xerror(const char *fmt, ...)
+{
+    va_list arg;
+    va_start(arg, fmt);
+
+    vfprintf(stderr, fmt, arg);
+    fputc('\n', stderr);
+
+    va_end(arg);
+}
+
+/**
+ * Vypise chybu nad konkretnym tokenom.
+ * @param - typ chyby
+ */
+void xerror_msg(enum xerror_error err)
+{
+    fputs("error:", stderr);
+
+    fputs(xerror_str[err], stderr);
+}
+
+/**
+ * Vypise warning na stderr podla typu.
+ * @param - typ warningu
+ * @return - void
+ */
+void xwarning_msg(enum xwarning_warning war)
+{
+    fputs("warning:", stderr);
+
+    fputs(xwarning_str[war], stderr);
+}
+
+
+/**
+ * Wrapper nad kniznicnou funkciou malloc(), ktory naviac osetruje pripad
+ * nepridelenia pamate.
+ * @param - pocet bajtov k alokovaniu
+ * @return - pointer na pridelenu cast pamate
+ */
+void * xmalloc(size_t size)
+{
+    void * ptr = malloc(size);
+
+    if (! ptr)
+    {
+        xerror_msg(ERR_MY_ALLOC);
+        exit(RET_ERR_MY);
+    }
+
+    return ptr;
+}
+
+/**
+ * Wrapper nad kniznicnou funkciou malloc(), ktory naviac osetruje pripad
+ * nepridelenia pamate.
+ * @param - pocet bajtov k alokovaniu
+ * @return - pointer na pridelenu cast pamate
+ */
+void * xcalloc(size_t size, size_t size_type)
+{
+    void * ptr = calloc(size, size_type);
+
+    if (! ptr)
+    {
+        xerror_msg(ERR_MY_ALLOC);
+        exit(RET_ERR_MY);
+    }
+
+    return ptr;
+}
+
+/**
+ * Parovy wrapper nad funkciou xmalloc(), ktory uvolni pridelenu pamat.
+ * @param - pointer na pridelenu cast pamate, ktora ma byt uvolnena
+ * @return - void
+ */
+void xfree(void * ptr)
+{
+    free(ptr);
+}
+

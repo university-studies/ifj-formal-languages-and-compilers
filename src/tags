@@ -1,0 +1,706 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADD	pstack.h	/^    ADD,            \/\/  +$/;"	e	enum:pstack_item_type
+AND	pstack.h	/^    AND,            \/\/  and$/;"	e	enum:pstack_item_type
+ASCII	ial.h	24;"	d
+ASSIGN	parser.c	/^    ASSIGN,$/;"	e	enum:gen_inst_type	file:
+Anal za probl mu a princ p jeho rie enia	DOC/dokumentace.tex	/^\\section{Analýza problému a~princíp jeho riešenia} \\label{analyza}$/;"	s
+BRACKET_L	pstack.h	/^    BRACKET_L,      \/\/  ($/;"	e	enum:pstack_item_type
+BRACKET_R	pstack.h	/^    BRACKET_R,      \/\/  )$/;"	e	enum:pstack_item_type
+Boyer Moorov algoritmus	DOC/dokumentace.tex	/^\\subsection{Boyer\\,--\\,Moorov algoritmus}$/;"	b
+CC	Makefile	/^CC= gcc$/;"	m
+CFLAGS_DEBUG	Makefile	/^CFLAGS_DEBUG = -ggdb -DDEBUG -O0$/;"	m
+CFLAGS_EXEC	Makefile	/^CFLAGS_EXEC= -fomit-frame-pointer -DNDEBUG -O2$/;"	m
+CITACIE	DOC/Makefile	/^CITACIE=literatura.bib$/;"	m
+CONCAT	pstack.h	/^    CONCAT,         \/\/  ..$/;"	e	enum:pstack_item_type
+DEBUG_END	debug.c	/^void DEBUG_END(void)$/;"	f
+DEBUG_END	debug.h	42;"	d
+DEBUG_MSG	debug.c	/^void DEBUG_MSG(const char * format, ...)$/;"	f
+DEBUG_MSG	debug.h	41;"	d
+DEBUG_PPARSER	debug.c	/^void DEBUG_PPARSER(void)$/;"	f
+DEBUG_PPARSER	debug.h	46;"	d
+DEBUG_PRINT_HTABLE	debug.c	/^void DEBUG_PRINT_HTABLE(const struct Thtable * htable)$/;"	f
+DEBUG_PRINT_HTABLE	debug.h	48;"	d
+DEBUG_PRINT_INSTRUCTION	debug.c	/^void DEBUG_PRINT_INSTRUCTION(const Tinstruction * inst)$/;"	f
+DEBUG_PRINT_INSTRUCTION	debug.h	44;"	d
+DEBUG_PRINT_TOKEN	debug.c	/^void DEBUG_PRINT_TOKEN(const Ttoken * token)$/;"	f
+DEBUG_PRINT_TOKEN	debug.h	43;"	d
+DEBUG_PRINT_VARIABLE	debug.c	/^void DEBUG_PRINT_VARIABLE(const Tvariable * var)$/;"	f
+DEBUG_PRINT_VARIABLE	debug.h	45;"	d
+DEBUG_PSTACK_PRINT_ALL	debug.c	/^void DEBUG_PSTACK_PRINT_ALL(void)$/;"	f
+DEBUG_PSTACK_PRINT_ALL	debug.h	47;"	d
+DEBUG_START	debug.c	/^void DEBUG_START(void)$/;"	f
+DEBUG_START	debug.h	40;"	d
+DEQUAL	interpret.c	31;"	d	file:
+DIV	pstack.h	/^    DIV,            \/\/  \/$/;"	e	enum:pstack_item_type
+EQUAL	pstack.h	/^    EQUAL,          \/\/  =$/;"	e	enum:pstack_item_type
+ERR_INT_BAD_ARITH_OP	xwrappers.h	/^    ERR_INT_BAD_ARITH_OP,$/;"	e	enum:xerror_error
+ERR_INT_BAD_CMP	xwrappers.h	/^    ERR_INT_BAD_CMP,$/;"	e	enum:xerror_error
+ERR_INT_BAD_CONC	xwrappers.h	/^    ERR_INT_BAD_CONC,$/;"	e	enum:xerror_error
+ERR_INT_DIFF_CMP	xwrappers.h	/^    ERR_INT_DIFF_CMP,$/;"	e	enum:xerror_error
+ERR_INT_NUM_RANGE	xwrappers.h	/^    ERR_INT_NUM_RANGE,$/;"	e	enum:xerror_error
+ERR_INT_READ_NUM	xwrappers.h	/^    ERR_INT_READ_NUM,$/;"	e	enum:xerror_error
+ERR_INT_READ_OP	xwrappers.h	/^    ERR_INT_READ_OP,$/;"	e	enum:xerror_error
+ERR_INT_STRLEN_OP	xwrappers.h	/^    ERR_INT_STRLEN_OP,$/;"	e	enum:xerror_error
+ERR_INT_SUBSTR_OP	xwrappers.h	/^    ERR_INT_SUBSTR_OP,$/;"	e	enum:xerror_error
+ERR_INT_WRITE_OP	xwrappers.h	/^    ERR_INT_WRITE_OP,$/;"	e	enum:xerror_error
+ERR_LEX_BAD_ESC_SEQ	xwrappers.h	/^    ERR_LEX_BAD_ESC_SEQ,$/;"	e	enum:xerror_error
+ERR_LEX_BAD_OPERATOR	xwrappers.h	/^    ERR_LEX_BAD_OPERATOR,$/;"	e	enum:xerror_error
+ERR_LEX_MALFORMED_NUM	xwrappers.h	/^    ERR_LEX_MALFORMED_NUM,$/;"	e	enum:xerror_error
+ERR_LEX_STRAY_CHR	xwrappers.h	/^    ERR_LEX_STRAY_CHR,$/;"	e	enum:xerror_error
+ERR_LEX_UNTERMINATED_COM	xwrappers.h	/^    ERR_LEX_UNTERMINATED_COM,$/;"	e	enum:xerror_error
+ERR_LEX_UNTERMINATED_STR	xwrappers.h	/^    ERR_LEX_UNTERMINATED_STR,$/;"	e	enum:xerror_error
+ERR_MY_ALLOC	xwrappers.h	/^    ERR_MY_ALLOC,$/;"	e	enum:xerror_error
+ERR_MY_PSTACK_BAD_DATA	xwrappers.h	/^    ERR_MY_PSTACK_BAD_DATA,$/;"	e	enum:xerror_error
+ERR_MY_PSTACK_OVERF	xwrappers.h	/^    ERR_MY_PSTACK_OVERF,$/;"	e	enum:xerror_error
+ERR_MY_TOKEN	xwrappers.h	/^    ERR_MY_TOKEN,$/;"	e	enum:xerror_error
+ERR_SEM_BAD_ARITH_LIT	xwrappers.h	/^    ERR_SEM_BAD_ARITH_LIT,$/;"	e	enum:xerror_error
+ERR_SEM_BAD_CMP_LIT	xwrappers.h	/^    ERR_SEM_BAD_CMP_LIT,$/;"	e	enum:xerror_error
+ERR_SEM_BAD_STRING_LIT	xwrappers.h	/^    ERR_SEM_BAD_STRING_LIT,$/;"	e	enum:xerror_error
+ERR_SEM_FUNC_IN_EXPR	xwrappers.h	/^    ERR_SEM_FUNC_IN_EXPR,$/;"	e	enum:xerror_error
+ERR_SEM_FUN_REDECLARATION	xwrappers.h	/^    ERR_SEM_FUN_REDECLARATION,$/;"	e	enum:xerror_error
+ERR_SEM_ID_COLLISION	xwrappers.h	/^    ERR_SEM_ID_COLLISION,$/;"	e	enum:xerror_error
+ERR_SEM_ID_UNDEFINED	xwrappers.h	/^    ERR_SEM_ID_UNDEFINED,$/;"	e	enum:xerror_error
+ERR_SEM_MAIN_PARAM	xwrappers.h	/^    ERR_SEM_MAIN_PARAM,$/;"	e	enum:xerror_error
+ERR_SEM_READ_PARAM	xwrappers.h	/^    ERR_SEM_READ_PARAM,$/;"	e	enum:xerror_error
+ERR_SEM_UNDEFINED_ID_EXPR	xwrappers.h	/^    ERR_SEM_UNDEFINED_ID_EXPR,$/;"	e	enum:xerror_error
+ERR_SEM_WRITE_PARAM	xwrappers.h	/^    ERR_SEM_WRITE_PARAM,$/;"	e	enum:xerror_error
+ERR_SYN_EXPR	xwrappers.h	/^    ERR_SYN_EXPR,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_ASSIGNMENT	xwrappers.h	/^    ERR_SYN_EXP_ASSIGNMENT,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_COMMA	xwrappers.h	/^    ERR_SYN_EXP_COMMA,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_DO	xwrappers.h	/^    ERR_SYN_EXP_DO,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_EOF	xwrappers.h	/^    ERR_SYN_EXP_EOF,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_FUN	xwrappers.h	/^    ERR_SYN_EXP_FUN,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_ID	xwrappers.h	/^    ERR_SYN_EXP_ID,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_ID_VAR	xwrappers.h	/^    ERR_SYN_EXP_ID_VAR,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_LITERAL	xwrappers.h	/^    ERR_SYN_EXP_LITERAL,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_L_BRACKET	xwrappers.h	/^    ERR_SYN_EXP_L_BRACKET,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_R_BRACKET	xwrappers.h	/^    ERR_SYN_EXP_R_BRACKET,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_SEMICOLON	xwrappers.h	/^    ERR_SYN_EXP_SEMICOLON,$/;"	e	enum:xerror_error
+ERR_SYN_EXP_THEN	xwrappers.h	/^    ERR_SYN_EXP_THEN,$/;"	e	enum:xerror_error
+ERR_SYN_MAIN_LAST	xwrappers.h	/^    ERR_SYN_MAIN_LAST,$/;"	e	enum:xerror_error
+ERR_SYN_NO_L_BRACKET	xwrappers.h	/^    ERR_SYN_NO_L_BRACKET,$/;"	e	enum:xerror_error
+ERR_SYN_NO_MAIN	xwrappers.h	/^    ERR_SYN_NO_MAIN,$/;"	e	enum:xerror_error
+ERR_SYN_UNEXP_KEY_EXP	xwrappers.h	/^    ERR_SYN_UNEXP_KEY_EXP,$/;"	e	enum:xerror_error
+ERR_SYN_UNEXP_TKN	xwrappers.h	/^    ERR_SYN_UNEXP_TKN,$/;"	e	enum:xerror_error
+EXPR	pstack.h	/^    EXPR,           \/\/ cislo, identifikator, string, nil, boolean, zjednoduseny vyraz,$/;"	e	enum:pstack_item_type
+FBUFFER_FULL	fbuffer.c	33;"	d	file:
+FBUFFER_MARK	fbuffer.c	38;"	d	file:
+FBUFFER_MOD	fbuffer.c	27;"	d	file:
+FBUFFER_SIZE	fbuffer.c	26;"	d	file:
+FBUF_GET	fbuffer.h	/^    FBUF_GET,$/;"	e	enum:fbuffer_command
+FBUF_UNGET	fbuffer.h	/^    FBUF_UNGET,$/;"	e	enum:fbuffer_command
+FUN	parser.c	/^    FUN,$/;"	e	enum:gen_inst_type	file:
+GREATER	pstack.h	/^    GREATER,        \/\/  >$/;"	e	enum:pstack_item_type
+GREATER_EQUAL	pstack.h	/^    GREATER_EQUAL,  \/\/  >=$/;"	e	enum:pstack_item_type
+HASH_SIZE	parser.c	36;"	d	file:
+HTABLE_SIZE	debug.c	35;"	d	file:
+IF	parser.c	/^    IF,$/;"	e	enum:gen_inst_type	file:
+IFJ11_BUILDIN_H_	buildin.h	17;"	d
+IFJ11_DEBUG_H_	debug.h	18;"	d
+IFJ11_FBUFFER_H_	fbuffer.h	17;"	d
+IFJ11_IAL_H_	ial.h	21;"	d
+IFJ11_IFJ11_H_	ifj11.h	17;"	d
+IFJ11_INSTRUCTION_H_	instruction.h	17;"	d
+IFJ11_INTERPRET_H_	interpret.h	17;"	d
+IFJ11_PARSER_H_	parser.h	17;"	d
+IFJ11_PPARSER_H_	pparser.h	17;"	d
+IFJ11_PSTACK_H_	pstack.h	17;"	d
+IFJ11_SCANNER_H_	scanner.h	17;"	d
+IFJ11_STACK_H_	stack.h	18;"	d
+IFJ11_STR_H_	str.h	26;"	d
+IFJ11_VARIABLE_H_	variable.h	17;"	d
+IFJ11_XWRAPPERS_H_	xwrappers.h	18;"	d
+INST_ADD	instruction.h	/^    INST_ADD,   \/* dst = src1 + src2    *\/$/;"	e	enum:inst_type
+INST_AND	instruction.h	/^    INST_AND,   \/* dst = src1 and src2  *\/$/;"	e	enum:inst_type
+INST_CALL	instruction.h	/^    INST_CALL,$/;"	e	enum:inst_type
+INST_CLR	instruction.h	/^    INST_CLR,   \/* dst = nil vynuluje premennu - nastavy ju na typ nil *\/$/;"	e	enum:inst_type
+INST_CMPE	instruction.h	/^    INST_CMPE,  \/* dst = src1 == src2   *\/$/;"	e	enum:inst_type
+INST_CMPG	instruction.h	/^    INST_CMPG,  \/* dst = src1 > src2    *\/$/;"	e	enum:inst_type
+INST_CMPGE	instruction.h	/^    INST_CMPGE, \/* dst = src1 >= src2   *\/$/;"	e	enum:inst_type
+INST_CMPL	instruction.h	/^    INST_CMPL,  \/* dst = src1 < src2    *\/$/;"	e	enum:inst_type
+INST_CMPLE	instruction.h	/^    INST_CMPLE, \/* dst = src1 <= src2   *\/$/;"	e	enum:inst_type
+INST_CMPNE	instruction.h	/^    INST_CMPNE, \/* dst = src1 ~= src2   *\/$/;"	e	enum:inst_type
+INST_CONC	instruction.h	/^    INST_CONC,  \/* dst = src1 .. src2   *\/$/;"	e	enum:inst_type
+INST_CPY	instruction.h	/^    INST_CPY,   \/* dst = src1 (kopirovanie hodnotou) *\/$/;"	e	enum:inst_type
+INST_DIV	instruction.h	/^    INST_DIV,   \/* dst = src1 \/ src2    *\/$/;"	e	enum:inst_type
+INST_ENTER	instruction.h	/^    INST_ENTER,$/;"	e	enum:inst_type
+INST_FIND	instruction.h	/^    INST_FIND,  \/* dst = find(src1)     *\/$/;"	e	enum:inst_type
+INST_INC	instruction.h	/^    INST_INC,   \/* dst = dst + 1        *\/$/;"	e	enum:inst_type
+INST_JIF	instruction.h	/^    INST_JIF,   \/* jump to dst if src1 == true *\/$/;"	e	enum:inst_type
+INST_JMP	instruction.h	/^    INST_JMP,   \/* jump to dst, navratova hodnota je ulozena v src1 *\/$/;"	e	enum:inst_type
+INST_JNIF	instruction.h	/^    INST_JNIF,  \/* jump to dst if src1 ~= true *\/$/;"	e	enum:inst_type
+INST_LEAVE	instruction.h	/^    INST_LEAVE,$/;"	e	enum:inst_type
+INST_LIST_ACTIVE	instruction.c	24;"	d	file:
+INST_LIST_EMPTY	instruction.c	23;"	d	file:
+INST_MOD	instruction.h	/^    INST_MOD,   \/* dst = src1 % src2    *\/$/;"	e	enum:inst_type
+INST_MOV	instruction.h	/^    INST_MOV,   \/* dst = src1 (kopirovanie odkazom)  *\/$/;"	e	enum:inst_type
+INST_MUL	instruction.h	/^    INST_MUL,   \/* dst = src1 * src2    *\/$/;"	e	enum:inst_type
+INST_NOP	instruction.h	/^    INST_NOP,$/;"	e	enum:inst_type
+INST_NOT	instruction.h	/^    INST_NOT,   \/* dst = not src1       *\/$/;"	e	enum:inst_type
+INST_OR	instruction.h	/^    INST_OR,    \/* dst = src1 or src2   *\/$/;"	e	enum:inst_type
+INST_POW	instruction.h	/^    INST_POW,   \/* dst = src1 ^ src2    *\/$/;"	e	enum:inst_type
+INST_READ	instruction.h	/^    INST_READ,  \/* dst = read(src1)     *\/$/;"	e	enum:inst_type
+INST_SORT	instruction.h	/^    INST_SORT,  \/* dst = sort(src1)     *\/$/;"	e	enum:inst_type
+INST_STRLEN	instruction.h	/^    INST_STRLEN,\/* dst = #src1          *\/$/;"	e	enum:inst_type
+INST_SUB	instruction.h	/^    INST_SUB,   \/* dst = src1 - src2    *\/$/;"	e	enum:inst_type
+INST_SUBSTR	instruction.h	/^    INST_SUBSTR,\/* dst = substr(dst, src1, src2)   *\/$/;"	e	enum:inst_type
+INST_TYPE	instruction.h	/^    INST_TYPE,  \/* dst = type(src1)     *\/$/;"	e	enum:inst_type
+INST_WRITE	instruction.h	/^    INST_WRITE, \/* write(src1)          *\/$/;"	e	enum:inst_type
+INT_CMP_CMPG	interpret.c	/^    INT_CMP_CMPG,$/;"	e	enum:interpret_cmp_le	file:
+INT_CMP_CMPGE	interpret.c	/^    INT_CMP_CMPGE,$/;"	e	enum:interpret_cmp_le	file:
+INT_CMP_CMPL	interpret.c	/^    INT_CMP_CMPL,$/;"	e	enum:interpret_cmp_le	file:
+INT_CMP_CMPLE	interpret.c	/^    INT_CMP_CMPLE,$/;"	e	enum:interpret_cmp_le	file:
+Interpret	DOC/dokumentace.tex	/^\\subsection{Interpret}$/;"	b
+LESS	pstack.h	/^    LESS,           \/\/  <$/;"	e	enum:pstack_item_type
+LESS_EQUAL	pstack.h	/^    LESS_EQUAL,     \/\/  <=$/;"	e	enum:pstack_item_type
+Lexik lny analyz tor	DOC/dokumentace.tex	/^\\subsection{Lexikálny analyzátor}$/;"	b
+MODULO	pstack.h	/^    MODULO,         \/\/  %$/;"	e	enum:pstack_item_type
+MUL	pstack.h	/^    MUL,            \/\/  *$/;"	e	enum:pstack_item_type
+Metrik k du	DOC/dokumentace.tex	/^\\section{Metriký kódu}$/;"	s
+N vrh rie enia lohy	DOC/dokumentace.tex	/^\\section{Návrh riešenia úlohy} \\label{navrh}$/;"	s
+NAME	DOC/Makefile	/^NAME=dokumentace$/;"	m
+NAME	PRES/Makefile	/^NAME=prezentace$/;"	m
+NONE	parser.c	/^    NONE = 0,$/;"	e	enum:gen_inst_type	file:
+NOT	pstack.h	/^    NOT,            \/\/  not$/;"	e	enum:pstack_item_type
+NOT_EQUAL	pstack.h	/^    NOT_EQUAL,      \/\/  ~=$/;"	e	enum:pstack_item_type
+NO_BRACKET	pstack.h	30;"	d
+OBJS_DEBUG	Makefile	/^OBJS_DEBUG= $(addsuffix -debug.o, $(OBJS))$/;"	m
+OBJS_EXEC	Makefile	/^OBJS_EXEC= $(addsuffix .o, $(OBJS))$/;"	m
+OR	pstack.h	/^    OR,             \/\/  or$/;"	e	enum:pstack_item_type
+PACKFILES	Makefile	/^PACKFILES= DOC\/dokumentace.pdf$/;"	m
+PACKNAME	Makefile	/^PACKNAME= xpokor32.tgz$/;"	m
+POWER	pstack.h	/^    POWER,          \/\/  ^$/;"	e	enum:pstack_item_type
+PSTACK_SIZE	pstack.h	25;"	d
+Po et riadkov zdrojov ho textu	DOC/dokumentace.tex	/^     \\paragraph{Počet riadkov zdrojového textu:} XXXX riadkov$/;"	P
+Po et s borov	DOC/dokumentace.tex	/^     \\paragraph{Počet súborov:} X súbory $/;"	P
+Popis rie enia	DOC/dokumentace.tex	/^\\section{Popis riešenia} \\label{riesenie}$/;"	s
+Pr ca v teame	DOC/dokumentace.tex	/^\\section{Práca v~teame}$/;"	s
+Preceden n anal za	DOC/dokumentace.tex	/^\\subsubsection{Precedenčná analýza}$/;"	b
+Quick sort	DOC/dokumentace.tex	/^\\subsection{Quick sort}$/;"	b
+READ	parser.c	/^    READ,$/;"	e	enum:gen_inst_type	file:
+REDUCE	pstack.h	/^    REDUCE,         \/\/vsetko sa ma zredukovat$/;"	e	enum:pstack_item_type
+RETURN	parser.c	/^    RETURN,$/;"	e	enum:gen_inst_type	file:
+RET_ERR_INT	ifj11.h	/^  RET_ERR_INT,      \/* chyba interpretace*\/$/;"	e	enum:ifj11_rt
+RET_ERR_LEX	ifj11.h	/^  RET_ERR_LEX,      \/* lexikalna chyba   *\/$/;"	e	enum:ifj11_rt
+RET_ERR_MY	ifj11.h	/^  RET_ERR_MY        \/* interna chyba     *\/$/;"	e	enum:ifj11_rt
+RET_ERR_SEM	ifj11.h	/^  RET_ERR_SEM,      \/* semanticka chyba  *\/$/;"	e	enum:ifj11_rt
+RET_ERR_SYN	ifj11.h	/^  RET_ERR_SYN,      \/* syntakticka chyba *\/$/;"	e	enum:ifj11_rt
+RET_OK	ifj11.h	/^  RET_OK,$/;"	e	enum:ifj11_rt
+Rekurz vny zostup	DOC/dokumentace.tex	/^\\subsubsection{Rekurzívny zostup}$/;"	b
+SPECIFIC_WORDS	scanner.c	/^const char *SPECIFIC_WORDS[] =$/;"	v
+START	pstack.h	/^    START,          \/\/ '$'$/;"	e	enum:pstack_item_type
+STRLEN	pstack.h	/^    STRLEN,         \/\/  #$/;"	e	enum:pstack_item_type
+STR_LEN_INC	str.c	29;"	d	file:
+ST_ASSIGN_OR_EQUAL	scanner.c	/^    ST_ASSIGN_OR_EQUAL,$/;"	e	enum:automat_states	file:
+ST_COMMENT	scanner.c	/^    ST_COMMENT,$/;"	e	enum:automat_states	file:
+ST_COMMENT_BLOCK	scanner.c	/^    ST_COMMENT_BLOCK,$/;"	e	enum:automat_states	file:
+ST_COMMENT_BLOCK_E	scanner.c	/^    ST_COMMENT_BLOCK_E,$/;"	e	enum:automat_states	file:
+ST_COMMENT_BLOCK_S	scanner.c	/^    ST_COMMENT_BLOCK_S,$/;"	e	enum:automat_states	file:
+ST_COMMENT_S	scanner.c	/^    ST_COMMENT_S,$/;"	e	enum:automat_states	file:
+ST_CONC	scanner.c	/^    ST_CONC,$/;"	e	enum:automat_states	file:
+ST_GREATER	scanner.c	/^    ST_GREATER,$/;"	e	enum:automat_states	file:
+ST_ID	scanner.c	/^    ST_ID,$/;"	e	enum:automat_states	file:
+ST_INIT	scanner.c	/^    ST_INIT = 0,$/;"	e	enum:automat_states	file:
+ST_LESS	scanner.c	/^    ST_LESS,$/;"	e	enum:automat_states	file:
+ST_NIL	scanner.c	/^    ST_NIL,$/;"	e	enum:automat_states	file:
+ST_NOT_EQUAL	scanner.c	/^    ST_NOT_EQUAL,$/;"	e	enum:automat_states	file:
+ST_NUMBER_EXP	scanner.c	/^    ST_NUMBER_EXP,$/;"	e	enum:automat_states	file:
+ST_NUMBER_EXP_L	scanner.c	/^    ST_NUMBER_EXP_L,$/;"	e	enum:automat_states	file:
+ST_NUMBER_INT	scanner.c	/^    ST_NUMBER_INT,$/;"	e	enum:automat_states	file:
+ST_NUMBER_REAL	scanner.c	/^    ST_NUMBER_REAL,$/;"	e	enum:automat_states	file:
+ST_NUMBER_REAL_L	scanner.c	/^    ST_NUMBER_REAL_L,$/;"	e	enum:automat_states	file:
+ST_NUMBER_SIGN_EXP	scanner.c	/^    ST_NUMBER_SIGN_EXP,$/;"	e	enum:automat_states	file:
+ST_STRING	scanner.c	/^    ST_STRING,$/;"	e	enum:automat_states	file:
+ST_STRING_ESC	scanner.c	/^    ST_STRING_ESC,$/;"	e	enum:automat_states	file:
+ST_STRING_ESC_NUM_1G	scanner.c	/^    ST_STRING_ESC_NUM_1G,$/;"	e	enum:automat_states	file:
+ST_STRING_ESC_NUM_1L	scanner.c	/^    ST_STRING_ESC_NUM_1L,$/;"	e	enum:automat_states	file:
+ST_STRING_ESC_NUM_2G	scanner.c	/^    ST_STRING_ESC_NUM_2G,$/;"	e	enum:automat_states	file:
+ST_STRING_ESC_NUM_2L	scanner.c	/^    ST_STRING_ESC_NUM_2L,$/;"	e	enum:automat_states	file:
+ST_SUB	scanner.c	/^    ST_SUB,$/;"	e	enum:automat_states	file:
+SUB	pstack.h	/^    SUB,            \/\/  -$/;"	e	enum:pstack_item_type
+Semantick analyz tor	DOC/dokumentace.tex	/^\\subsection{Semantický analyzátor}$/;"	b
+Syntaktick analyz tor	DOC/dokumentace.tex	/^\\subsection{Syntaktický analyzátor}$/;"	b
+TKN_BI_FIND	scanner.h	/^    TKN_BI_FIND,$/;"	e	enum:token_id
+TKN_BI_SORT	scanner.h	/^    TKN_BI_SORT,$/;"	e	enum:token_id
+TKN_BI_SUBSTR	scanner.h	/^    TKN_BI_SUBSTR,$/;"	e	enum:token_id
+TKN_BI_TYPE	scanner.h	/^    TKN_BI_TYPE,$/;"	e	enum:token_id
+TKN_BRACKET_L	scanner.h	/^    TKN_BRACKET_L,$/;"	e	enum:token_id
+TKN_BRACKET_R	scanner.h	/^    TKN_BRACKET_R,$/;"	e	enum:token_id
+TKN_COMMA	scanner.h	/^    TKN_COMMA,$/;"	e	enum:token_id
+TKN_EOF	scanner.h	/^    TKN_EOF,$/;"	e	enum:token_id
+TKN_ID	scanner.h	/^    TKN_ID = 0,$/;"	e	enum:token_id
+TKN_KW_DO	scanner.h	/^    TKN_KW_DO,$/;"	e	enum:token_id
+TKN_KW_ELSE	scanner.h	/^    TKN_KW_ELSE,$/;"	e	enum:token_id
+TKN_KW_END	scanner.h	/^    TKN_KW_END,$/;"	e	enum:token_id
+TKN_KW_FALSE	scanner.h	/^    TKN_KW_FALSE,$/;"	e	enum:token_id
+TKN_KW_FUNCTION	scanner.h	/^    TKN_KW_FUNCTION,$/;"	e	enum:token_id
+TKN_KW_IF	scanner.h	/^    TKN_KW_IF,$/;"	e	enum:token_id
+TKN_KW_LOCAL	scanner.h	/^    TKN_KW_LOCAL,$/;"	e	enum:token_id
+TKN_KW_NIL	scanner.h	/^    TKN_KW_NIL,$/;"	e	enum:token_id
+TKN_KW_READ	scanner.h	/^    TKN_KW_READ,$/;"	e	enum:token_id
+TKN_KW_RETURN	scanner.h	/^    TKN_KW_RETURN,$/;"	e	enum:token_id
+TKN_KW_THEN	scanner.h	/^    TKN_KW_THEN,$/;"	e	enum:token_id
+TKN_KW_TRUE	scanner.h	/^    TKN_KW_TRUE,$/;"	e	enum:token_id
+TKN_KW_WHILE	scanner.h	/^    TKN_KW_WHILE,$/;"	e	enum:token_id
+TKN_KW_WRITE	scanner.h	/^    TKN_KW_WRITE,$/;"	e	enum:token_id
+TKN_NUMBER	scanner.h	/^    TKN_NUMBER,$/;"	e	enum:token_id
+TKN_OP_ADD	scanner.h	/^    TKN_OP_ADD,$/;"	e	enum:token_id
+TKN_OP_ASSIGNMENT	scanner.h	/^    TKN_OP_ASSIGNMENT,$/;"	e	enum:token_id
+TKN_OP_CONC	scanner.h	/^    TKN_OP_CONC,$/;"	e	enum:token_id
+TKN_OP_DIV	scanner.h	/^    TKN_OP_DIV,$/;"	e	enum:token_id
+TKN_OP_EQUAL	scanner.h	/^    TKN_OP_EQUAL,$/;"	e	enum:token_id
+TKN_OP_GREATER	scanner.h	/^    TKN_OP_GREATER,$/;"	e	enum:token_id
+TKN_OP_GREATER_EQUAL	scanner.h	/^    TKN_OP_GREATER_EQUAL,$/;"	e	enum:token_id
+TKN_OP_LESS	scanner.h	/^    TKN_OP_LESS,$/;"	e	enum:token_id
+TKN_OP_LESS_EQUAL	scanner.h	/^    TKN_OP_LESS_EQUAL,$/;"	e	enum:token_id
+TKN_OP_MOD	scanner.h	/^        TKN_OP_MOD,$/;"	e	enum:token_id
+TKN_OP_MUL	scanner.h	/^    TKN_OP_MUL,$/;"	e	enum:token_id
+TKN_OP_NOT_EQUAL	scanner.h	/^    TKN_OP_NOT_EQUAL,$/;"	e	enum:token_id
+TKN_OP_POWER	scanner.h	/^    TKN_OP_POWER,$/;"	e	enum:token_id
+TKN_OP_STRLEN	scanner.h	/^        TKN_OP_STRLEN,$/;"	e	enum:token_id
+TKN_OP_SUB	scanner.h	/^    TKN_OP_SUB,$/;"	e	enum:token_id
+TKN_RW_AND	scanner.h	/^    TKN_RW_AND,$/;"	e	enum:token_id
+TKN_RW_BREAK	scanner.h	/^    TKN_RW_BREAK,$/;"	e	enum:token_id
+TKN_RW_ELSEIF	scanner.h	/^    TKN_RW_ELSEIF,$/;"	e	enum:token_id
+TKN_RW_FOR	scanner.h	/^    TKN_RW_FOR,$/;"	e	enum:token_id
+TKN_RW_IN	scanner.h	/^    TKN_RW_IN,$/;"	e	enum:token_id
+TKN_RW_NOT	scanner.h	/^    TKN_RW_NOT,$/;"	e	enum:token_id
+TKN_RW_OR	scanner.h	/^    TKN_RW_OR,$/;"	e	enum:token_id
+TKN_RW_REPEAT	scanner.h	/^    TKN_RW_REPEAT,$/;"	e	enum:token_id
+TKN_RW_UNTIL	scanner.h	/^    TKN_RW_UNTIL,$/;"	e	enum:token_id
+TKN_SEMICOL	scanner.h	/^    TKN_SEMICOL,$/;"	e	enum:token_id
+TKN_STRING	scanner.h	/^    TKN_STRING,$/;"	e	enum:token_id
+TYPE_MAX_LEN	buildin.c	29;"	d	file:
+Tabu la symbolov	DOC/dokumentace.tex	/^\\subsection{Tabuľla symbolov}$/;"	b
+Tfbuffer	fbuffer.c	/^} Tfbuffer;$/;"	t	typeref:struct:fbuffer_pool	file:
+Thtable	ial.h	/^typedef struct Thtable$/;"	s
+Thtable	ial.h	/^} Thtable;$/;"	t	typeref:struct:Thtable
+Thtable_item	ial.h	/^typedef struct Thtable_item$/;"	s
+Thtable_item	ial.h	/^} Thtable_item;$/;"	t	typeref:struct:Thtable_item
+Tinstruction	instruction.h	/^typedef struct Tinstruction {$/;"	s
+Tinstruction	instruction.h	/^} Tinstruction;$/;"	t	typeref:struct:Tinstruction
+Tinstruction_list	instruction.h	/^} Tinstruction_list;$/;"	t	typeref:struct:Tistruction_list
+Tistruction_list	instruction.h	/^typedef struct Tistruction_list {$/;"	s
+Tpparser_data	pparser.c	/^typedef struct Tpparser_data$/;"	s	file:
+Tpparser_data	pparser.c	/^} Tpparser_data;$/;"	t	typeref:struct:Tpparser_data	file:
+Tpstack	pstack.h	/^} Tpstack;$/;"	t	typeref:struct:pstack
+Tpstack_item	pstack.h	/^} Tpstack_item;$/;"	t	typeref:struct:pstack_item
+Tstack_item	stack.h	/^typedef struct Tstack_item$/;"	s
+Tstack_item	stack.h	/^} Tstack_item;$/;"	t	typeref:struct:Tstack_item
+Tstring	str.h	/^} Tstring;$/;"	t	typeref:struct:string
+Ttoken	scanner.h	/^typedef struct Ttoken$/;"	s
+Ttoken	scanner.h	/^} Ttoken;$/;"	t	typeref:struct:Ttoken
+Ttoken_value	scanner.h	/^} Ttoken_value;$/;"	t	typeref:union:token_value
+Tvariable	variable.h	/^typedef struct Tvariable {$/;"	s
+Tvariable	variable.h	/^} Tvariable;$/;"	t	typeref:struct:Tvariable
+Tvariable_list	variable.h	/^typedef struct Tvariable_list {$/;"	s
+Tvariable_list	variable.h	/^} Tvariable_list;$/;"	t	typeref:struct:Tvariable_list
+UNINITIALIZED	pstack.h	28;"	d
+VARIABLE_LIST_EMPTY	variable.c	24;"	d	file:
+VAR_BOOL	variable.h	/^    VAR_BOOL,$/;"	e	enum:var_type
+VAR_NIL	variable.h	/^    VAR_NIL,$/;"	e	enum:var_type
+VAR_NUM	variable.h	/^    VAR_NUM,$/;"	e	enum:var_type
+VAR_STR	variable.h	/^    VAR_STR,$/;"	e	enum:var_type
+Ve kos spustite n ho s boru	DOC/dokumentace.tex	/^     \\paragraph{Veľkosť spustiteľného súboru:} XXXXB (systém GNU\/Linux, $/;"	P
+Ve kos statick ch d t	DOC/dokumentace.tex	/^     \\paragraph{Veľkosť statických dát:} XXXXB$/;"	P
+Vn torn trukt ra interpretru	DOC/dokumentace.tex	/^\\subsection{Vnútorná štruktúra interpretru}$/;"	b
+Vo ba datov ch typov	DOC/dokumentace.tex	/^\\subsection{Voľba datových typov}$/;"	b
+Volanie podprogramu a n vrat	DOC/dokumentace.tex	/^\\subsection{Volanie podprogramu a~návrat}$/;"	b
+WAR_IGNORE_RESULT	xwrappers.h	/^    WAR_IGNORE_RESULT,$/;"	e	enum:xwarning_warning
+WHILE	parser.c	/^    WHILE,$/;"	e	enum:gen_inst_type	file:
+WRITE	parser.c	/^    WRITE,$/;"	e	enum:gen_inst_type	file:
+Z ver	DOC/dokumentace.tex	/^\\section{Záver} \\label{zaver}$/;"	s
+active	instruction.h	/^    Tinstruction * active;$/;"	m	struct:Tistruction_list
+active	variable.h	/^    Tvariable * active;$/;"	m	struct:Tvariable_list
+alloc_size	ial.c	/^static long int alloc_size(long int intpart_from, long int intpart_to)$/;"	f	file:
+alloc_size	str.h	/^  int alloc_size;    \/\/ velikost alokovane pameti$/;"	m	struct:string
+arg	parser.c	/^static bool arg(Ttoken * token)$/;"	f	file:
+arg_count	parser.c	/^static int arg_count;$/;"	v	file:
+args_list	parser.c	/^static bool args_list(Ttoken * token)$/;"	f	file:
+ask_for_executable	test.sh	/^function ask_for_executable() {$/;"	f
+assign_var	parser.c	/^static Tvariable * assign_var = NULL;$/;"	v	file:
+automat_states	scanner.c	/^enum automat_states$/;"	g	file:
+b	fbuffer.c	/^static Tfbuffer * b = NULL;$/;"	v	file:
+boolean	variable.h	/^        bool boolean;$/;"	m	union:Tvariable::variable_val
+buf	fbuffer.c	/^    int buf[FBUFFER_SIZE];      \/* Samotny cyklicky buffer              *\/$/;"	m	struct:fbuffer_pool	file:
+build_in	parser.c	/^static bool build_in(Ttoken * token)$/;"	f	file:
+buildin_conc	buildin.c	/^bool buildin_conc(Tvariable * dst,$/;"	f
+buildin_find	buildin.c	/^bool buildin_find(Tvariable * dst,$/;"	f
+buildin_freestr	buildin.c	/^static inline void buildin_freestr(Tvariable * var)$/;"	f	file:
+buildin_read	buildin.c	/^bool buildin_read(Tvariable * dst, const Tvariable * item)$/;"	f
+buildin_sort	buildin.c	/^bool buildin_sort(Tvariable * dst, const Tvariable * str)$/;"	f
+buildin_substr	buildin.c	/^bool buildin_substr(Tvariable * src1,$/;"	f
+buildin_type	buildin.c	/^bool buildin_type(Tvariable * dst, const Tvariable * item)$/;"	f
+buildin_write	buildin.c	/^bool buildin_write(const Tvariable * item)$/;"	f
+calling_func	parser.c	/^static Thtable_item * calling_func = NULL;$/;"	v	file:
+char_jump_init	ial.c	/^static void char_jump_init(long int *arr, char *needle, long int len_needle)$/;"	f	file:
+check_arg_type	parser.c	/^static bool check_arg_type(Ttoken * token, Tvariable ** var)$/;"	f	file:
+check_executable	test.sh	/^function check_executable() {$/;"	f
+check_test_result	test.sh	/^function check_test_result() {$/;"	f
+clean_test_files	test.sh	/^function clean_test_files() {$/;"	f
+current_func	parser.c	/^static Thtable_item * current_func = NULL;$/;"	v	file:
+current_main	parser.c	/^static bool current_main(Thtable_item * current_func)$/;"	f	file:
+current_var	parser.c	/^static char * current_var = NULL;$/;"	v	file:
+dclr_type	parser.c	/^static bool dclr_type(Ttoken * token)$/;"	f	file:
+debug_file	debug.c	/^static FILE * debug_file = NULL;$/;"	v	file:
+df_list	parser.c	/^static bool df_list(Ttoken * token)$/;"	f	file:
+down	fbuffer.c	/^    int down;                   \/* Dolne ukazovatko do bufferu          *\/$/;"	m	struct:fbuffer_pool	file:
+dst	instruction.h	/^    union inst_operand dst;$/;"	m	struct:Tinstruction	typeref:union:Tinstruction::inst_operand
+end	parser.c	/^static bool end(Ttoken * token)$/;"	f	file:
+expr	parser.c	/^static bool expr(Tvariable ** expr_result, Ttoken * token)$/;"	f	file:
+f	fbuffer.c	/^    FILE * f;                   \/* FILE s ktorym sa pracuje             *\/$/;"	m	struct:fbuffer_pool	file:
+factorial	TEST/0003/T_program.lua	/^function factorial(n)$/;"	f
+fbuffer	fbuffer.c	/^int fbuffer(enum fbuffer_command cmd)$/;"	f
+fbuffer_command	fbuffer.h	/^enum fbuffer_command$/;"	g
+fbuffer_del	fbuffer.c	/^bool fbuffer_del(void)$/;"	f
+fbuffer_init	fbuffer.c	/^bool fbuffer_init(const char * fname)$/;"	f
+fbuffer_pool	fbuffer.c	/^typedef struct fbuffer_pool$/;"	s	file:
+find 	TEST/ifj11.lua	/^function find (haystack, needle)$/;"	f
+first	instruction.h	/^    Tinstruction * first;$/;"	m	struct:Tistruction_list
+first	variable.h	/^    Tvariable * first;$/;"	m	struct:Tvariable_list
+flattening	is_it_ok.sh	/^function flattening () {$/;"	f
+fname	fbuffer.c	/^    const char * fname;         \/* Nazov suboru s ktorym buffer pracuje *\/$/;"	m	struct:fbuffer_pool	file:
+from_index	ial.c	/^static long int from_index(long int intpart_from, long int len)$/;"	f	file:
+fun1	TEST/2001/T_program.lua	/^function fun1()$/;"	f
+fun1	TEST/2002/T_program.lua	/^function fun1(a, b)$/;"	f
+fun2	TEST/2002/T_program.lua	/^function fun2(lol, omg)$/;"	f
+fun_expr	parser.c	/^static bool fun_expr(Ttoken * token)$/;"	f	file:
+gen_inst	parser.c	/^static enum gen_inst_type gen_inst = NONE;$/;"	v	typeref:enum:gen_inst_type	file:
+gen_inst_type	parser.c	/^enum gen_inst_type$/;"	g	file:
+get_error	main.c	/^ifj11_rt get_error(void)$/;"	f
+htable_size	ial.h	/^    unsigned int htable_size;$/;"	m	struct:Thtable
+ial_find_boyer_moore	ial.c	/^long int ial_find_boyer_moore(char * source, char * needle)$/;"	f
+ial_hash_function	ial.c	/^unsigned int ial_hash_function(const char * key, unsigned int htable_size)$/;"	f
+ial_htable_delete	ial.c	/^void ial_htable_delete(Thtable * htptr)$/;"	f
+ial_htable_inc_param_count	ial.c	/^void ial_htable_inc_param_count(Thtable_item * func)$/;"	f
+ial_htable_init	ial.c	/^Thtable * ial_htable_init(unsigned int htable_size)$/;"	f
+ial_htable_insert	ial.c	/^Thtable_item * ial_htable_insert(Thtable * htptr, char * name)$/;"	f
+ial_htable_insert_var	ial.c	/^void ial_htable_insert_var(Tvariable * new_var, Thtable_item * htable_item)$/;"	f
+ial_htable_inst_first	ial.c	/^Tinstruction * ial_htable_inst_first(Thtable_item * func)$/;"	f
+ial_htable_inst_succ	ial.c	/^Tinstruction * ial_htable_inst_succ(Thtable_item * func)$/;"	f
+ial_htable_look_func	ial.c	/^Thtable_item * ial_htable_look_func(const Thtable * htable, const char * name)$/;"	f
+ial_htable_look_var	ial.c	/^Tvariable * ial_htable_look_var(const Thtable_item * func, const char * name)$/;"	f
+ial_htable_var_first	ial.c	/^Tvariable * ial_htable_var_first(Thtable_item * func)$/;"	f
+ial_htable_var_succ	ial.c	/^Tvariable * ial_htable_var_succ(Thtable_item * func)$/;"	f
+ial_sort	ial.c	/^void ial_sort(char * str)$/;"	f
+ial_sortw	ial.c	/^static void ial_sortw(char * str, size_t len)$/;"	f	file:
+ial_sortw_switch	ial.c	/^static inline void ial_sortw_switch(char * c1, char * c2)$/;"	f	file:
+ial_substr	ial.c	/^char * ial_substr(char * str, double from, double to)$/;"	f
+id	scanner.h	/^    enum token_id id;$/;"	m	struct:Ttoken	typeref:enum:Ttoken::token_id
+if tmp 	TEST/0008/T_program.lua	/^        if tmp == "function:" then$/;"	f
+ifj11_error	main.c	/^static ifj11_rt ifj11_error = RET_OK;$/;"	v	file:
+ifj11_rt	ifj11.h	/^enum ifj11_rt {$/;"	g
+ifj11_rt	ifj11.h	/^typedef enum ifj11_rt ifj11_rt;$/;"	t	typeref:enum:ifj11_rt
+inst	ial.h	/^    Tinstruction_list inst;$/;"	m	struct:Thtable_item
+inst	instruction.h	/^    struct Tinstruction * inst;$/;"	m	union:inst_operand	typeref:struct:inst_operand::Tinstruction
+inst_alloc	instruction.c	/^Tinstruction * inst_alloc(void)$/;"	f
+inst_append	instruction.c	/^void inst_append(Tinstruction_list * to, Tinstruction * inst)$/;"	f
+inst_create	instruction.c	/^Tinstruction * inst_create(enum inst_type opcode,$/;"	f
+inst_delete	instruction.c	/^void inst_delete(Tinstruction_list * list, Tinstruction * inst)$/;"	f
+inst_fill	instruction.c	/^void inst_fill(Tinstruction * inst,$/;"	f
+inst_last	instruction.c	/^void inst_last(Tinstruction_list * list)$/;"	f
+inst_list_destroy	instruction.c	/^void inst_list_destroy(Tinstruction_list * list)$/;"	f
+inst_list_first	instruction.c	/^Tinstruction * inst_list_first(Tinstruction_list * list)$/;"	f
+inst_list_init	instruction.c	/^void inst_list_init(Tinstruction_list * list)$/;"	f
+inst_list_postinsert	instruction.c	/^void inst_list_postinsert(Tinstruction_list * list, Tinstruction * inst)$/;"	f
+inst_list_succ	instruction.c	/^Tinstruction * inst_list_succ(Tinstruction_list * list)$/;"	f
+inst_operand	instruction.h	/^union inst_operand {$/;"	u
+inst_type	instruction.h	/^enum inst_type {$/;"	g
+interpret_check_arithmetic	interpret.c	/^static bool interpret_check_arithmetic(const Tvariable * src1,$/;"	f	file:
+interpret_check_number	interpret.c	/^static inline bool interpret_check_number(const Tvariable * var)$/;"	f	file:
+interpret_cmp_le	interpret.c	/^enum interpret_cmp_le {$/;"	g	file:
+interpret_equal	interpret.c	/^static bool interpret_equal(Tvariable * dst,$/;"	f	file:
+interpret_ifj11_bool	interpret.c	/^static bool interpret_ifj11_bool(const Tvariable * var)$/;"	f	file:
+interpret_ifj11_le	interpret.c	/^static bool interpret_ifj11_le(enum interpret_cmp_le operation,$/;"	f	file:
+interpret_mod	interpret.c	/^static bool interpret_mod(Tvariable * dst,$/;"	f	file:
+interpret_run	interpret.c	/^bool interpret_run(Tinstruction * inst)$/;"	f
+item_a	pparser.c	/^    Tpstack_item item_a;$/;"	m	struct:Tpparser_data	file:
+item_b	pparser.c	/^    Tpstack_item item_b;$/;"	m	struct:Tpparser_data	file:
+key	ial.h	/^    char * key;$/;"	m	struct:Thtable_item
+last	instruction.h	/^    Tinstruction * last;$/;"	m	struct:Tistruction_list
+last	variable.h	/^    Tvariable * last;$/;"	m	struct:Tvariable_list
+length	str.h	/^  int length;       \/\/ skutecna delka retezce$/;"	m	struct:string
+lit_or_id	parser.c	/^static bool lit_or_id(Ttoken * token)$/;"	f	file:
+literal	pstack.h	/^    bool literal;$/;"	m	struct:pstack_item
+main	TEST/0001/T_program.lua	/^function main()$/;"	f
+main	TEST/0002/T_program.lua	/^function main()$/;"	f
+main	TEST/0003/T_program.lua	/^function main()$/;"	f
+main	TEST/0004/T_program.lua	/^    function main()$/;"	f
+main	TEST/0005/T_program.lua	/^function main()$/;"	f
+main	TEST/0006/T_program.lua	/^function main()$/;"	f
+main	TEST/0007/T_program.lua	/^function main()$/;"	f
+main	TEST/0008/T_program.lua	/^function main()$/;"	f
+main	TEST/0009/T_program.lua	/^function main()$/;"	f
+main	TEST/0010/T_program.lua	/^function main()$/;"	f
+main	TEST/0011/T_program.lua	/^function main()$/;"	f
+main	TEST/0012/T_program.lua	/^function main()$/;"	f
+main	TEST/2001/T_program.lua	/^function main()$/;"	f
+main	TEST/2002/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-06/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-07/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-08/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-09/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-10/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-11/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-12/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-13/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-14/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-01-15/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-06/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-07/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-08/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-09/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-10/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-11/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-12/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-13/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-14/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-15/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-16/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-17/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-18/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-19/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-02-20/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-06/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-07/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-08/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-16/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-03-20/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-04-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-04-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-07/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-09/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-10-10/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-06/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-07/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-08/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-09/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-10/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-11/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-12/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-13/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-14/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-15/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-16/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-17/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-18/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-19/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-11-20/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-12-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-12-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-12-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-12-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-12-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-13-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-13-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-13-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-13-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-13-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-14-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-14-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-14-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-14-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-14-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-15-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-15-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-15-03/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-15-04/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-15-05/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-16-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-17-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-18-01/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-18-02/T_program.lua	/^function main()$/;"	f
+main	TEST/2008-30-10/T_program.lua	/^function main()$/;"	f
+main	TEST/3001/T_program.lua	/^function main()$/;"	f
+main	TEST/3002/T_program.lua	/^function main() $/;"	f
+main	TEST/3003/T_program.lua	/^function main() $/;"	f
+main	main.c	/^int main(int argc, char *argv[])$/;"	f
+make_test_dir	test.sh	/^function make_test_dir() {$/;"	f
+mark	fbuffer.c	/^    int mark;                   \/* Aktualna pozicia v befferu           *\/$/;"	m	struct:fbuffer_pool	file:
+mocnina	TEST/0008/T_program.lua	/^function mocnina(func,prvni_cislo,x)$/;"	f
+mocnina_retezec	TEST/0008/T_program.lua	/^function mocnina_retezec(func)$/;"	f
+my	TEST/0007/T_program.lua	/^function my(x, n)$/;"	f
+my2	TEST/0007/T_program.lua	/^function my2(x, n)$/;"	f
+nacti	TEST/0008/T_program.lua	/^function nacti(func)$/;"	f
+name	variable.h	/^    char * name;$/;"	m	struct:Tvariable
+nasob_del	TEST/0008/T_program.lua	/^function nasob_del(func,prvni_cislo,x,operace)$/;"	f
+nasob_del_retezec	TEST/0008/T_program.lua	/^function nasob_del_retezec(func,operace)$/;"	f
+next	ial.h	/^    struct Thtable_item * next;$/;"	m	struct:Thtable_item	typeref:struct:Thtable_item::Thtable_item
+next	instruction.h	/^    struct Tinstruction * next;$/;"	m	struct:Tinstruction	typeref:struct:Tinstruction::Tinstruction
+next	stack.h	/^    struct Tstack_item * next;$/;"	m	struct:Tstack_item	typeref:struct:Tstack_item::Tstack_item
+next	variable.h	/^    struct Tvariable * next;$/;"	m	struct:Tvariable	typeref:struct:Tvariable::Tvariable
+nomain	TEST/2201/T_program.lua	/^function nomain()$/;"	f
+num	scanner.h	/^    double num;$/;"	m	union:token_value
+num	variable.h	/^        double num;$/;"	m	union:Tvariable::variable_val
+opcode	instruction.h	/^    enum inst_type opcode;$/;"	m	struct:Tinstruction	typeref:enum:Tinstruction::inst_type
+param	parser.c	/^static bool param(Ttoken * token)$/;"	f	file:
+param_list	parser.c	/^static bool param_list(Ttoken * token)$/;"	f	file:
+param_number	ial.h	/^    int param_number;$/;"	m	struct:Thtable_item
+pecifik cia testov	DOC/dokumentace.tex	/^\\section{Špecifikácia testov} \\label{testy}$/;"	s
+pparser	pparser.c	/^Tvariable * pparser(Thtable * htable, Thtable_item * ptr_func,$/;"	f
+pparser_check_arithmetic	pparser.c	/^static bool pparser_check_arithmetic(Tpparser_data * data,$/;"	f	file:
+pparser_check_aritmetic_operand	pparser.c	/^static bool pparser_check_aritmetic_operand(Tpstack_item item)$/;"	f	file:
+pparser_check_expr	pparser.c	/^static bool pparser_check_expr(Tpstack_item item_a, Tpstack_item item_b)$/;"	f	file:
+pparser_check_logical_operand	pparser.c	/^static bool pparser_check_logical_operand(Tpstack_item item)$/;"	f	file:
+pparser_check_logical_type	pparser.c	/^static bool pparser_check_logical_type(Tpparser_data * data,$/;"	f	file:
+pparser_check_string	pparser.c	/^static bool pparser_check_string(Tpparser_data * data,$/;"	f	file:
+pparser_check_string_operand	pparser.c	/^static bool pparser_check_string_operand(Tpstack_item item)$/;"	f	file:
+pparser_create_opp_inst	pparser.c	/^static Tvariable * pparser_create_opp_inst(Thtable_item * func_ptr,$/;"	f	file:
+pparser_reduce	pparser.c	/^static bool pparser_reduce(Thtable_item * ptr_func, bool * error,$/;"	f	file:
+pparser_reduce_all	pparser.c	/^static Tvariable * pparser_reduce_all(Thtable_item * ptr_func)$/;"	f	file:
+pparser_reduce_arithmetic	pparser.c	/^static bool pparser_reduce_arithmetic(enum pstack_item_type reduce_type,$/;"	f	file:
+pparser_reduce_bool	pparser.c	/^static Tvariable * pparser_reduce_bool(Thtable_item * ptr_func, bool boolean)$/;"	f	file:
+pparser_reduce_bracket	pparser.c	/^static bool pparser_reduce_bracket(void)$/;"	f	file:
+pparser_reduce_concat	pparser.c	/^static bool pparser_reduce_concat(Thtable_item * ptr_func,$/;"	f	file:
+pparser_reduce_logical_no_type	pparser.c	/^static bool pparser_reduce_logical_no_type(enum pstack_item_type reduce_type,$/;"	f	file:
+pparser_reduce_logical_type	pparser.c	/^static bool pparser_reduce_logical_type(enum pstack_item_type reduce_type,$/;"	f	file:
+pparser_reduce_nil	pparser.c	/^static Tvariable * pparser_reduce_nil(Thtable_item * ptr_func)$/;"	f	file:
+pparser_reduce_not	pparser.c	/^static bool pparser_reduce_not(Thtable_item * ptr_func,$/;"	f	file:
+pparser_reduce_number	pparser.c	/^static Tvariable * pparser_reduce_number(Thtable_item * ptr_func, double number)$/;"	f	file:
+pparser_reduce_string	pparser.c	/^static Tvariable * pparser_reduce_string(Thtable_item * ptr_func,$/;"	f	file:
+pparser_reduce_strlen	pparser.c	/^static bool pparser_reduce_strlen(Thtable_item * ptr_func,$/;"	f	file:
+preskakuj_k_operatoru	TEST/0008/T_program.lua	/^function preskakuj_k_operatoru(func)$/;"	f
+prev	instruction.h	/^    struct Tinstruction * prev;$/;"	m	struct:Tinstruction	typeref:struct:Tinstruction::Tinstruction
+prev	stack.h	/^    struct Tstack_item * prev;$/;"	m	struct:Tstack_item	typeref:struct:Tstack_item::Tstack_item
+prev	variable.h	/^    struct Tvariable * prev;$/;"	m	struct:Tvariable	typeref:struct:Tvariable::Tvariable
+print_help	main.c	/^static void print_help(const char * pname)$/;"	f	file:
+print_help	test.sh	/^function print_help() {$/;"	f
+print_test_info	test.sh	/^function print_test_info() {$/;"	f
+program	parser.c	/^static bool program(Ttoken * token)$/;"	f	file:
+pstack	pstack.c	/^static Tpstack pstack;$/;"	v	file:
+pstack	pstack.h	/^typedef struct pstack$/;"	s
+pstack_init	pstack.c	/^void pstack_init(void)$/;"	f
+pstack_item	pstack.h	/^    Tpstack_item pstack_item[PSTACK_SIZE];$/;"	m	struct:pstack
+pstack_item	pstack.h	/^typedef struct pstack_item$/;"	s
+pstack_item_type	pstack.h	/^enum pstack_item_type$/;"	g
+pstack_pop_item	pstack.c	/^Tpstack_item pstack_pop_item(void)$/;"	f
+pstack_pop_type	pstack.c	/^enum pstack_item_type pstack_pop_type(void)$/;"	f
+pstack_push	pstack.c	/^bool pstack_push(enum pstack_item_type type, bool literal, Tvariable * variable)$/;"	f
+pstack_push_expr	pstack.c	/^bool pstack_push_expr(Tvariable * new_var, Tpstack_item item_a, Tpstack_item item_b)$/;"	f
+pstack_push_start	pstack.c	/^void pstack_push_start(void)$/;"	f
+pstack_top_bracket_left_index	pstack.c	/^int pstack_top_bracket_left_index(void)$/;"	f
+pstack_top_index	pstack.c	/^int pstack_top_index(void)$/;"	f
+pstack_top_type	pstack.c	/^int pstack_top_type(void)$/;"	f
+pstack_top_type_operation	pstack.c	/^int pstack_top_type_operation(void)$/;"	f
+pstack_type_from_index	pstack.c	/^int pstack_type_from_index(int index)$/;"	f
+read	TEST/ifj11.lua	/^function read(n)$/;"	f
+read_format	parser.c	/^static bool read_format(Ttoken * token)$/;"	f	file:
+read_fun_expr	parser.c	/^static bool read_fun_expr(Ttoken * token)$/;"	f	file:
+remove_CR	is_it_ok.sh	/^function remove_CR () {$/;"	f
+ret_inst	stack.h	/^    struct Tinstruction * ret_inst;$/;"	m	struct:Tstack_item	typeref:struct:Tstack_item::Tinstruction
+ret_value	ial.h	/^    struct Tvariable ret_value;$/;"	m	struct:Thtable_item	typeref:struct:Thtable_item::Tvariable
+run_ifj11	test.sh	/^function run_ifj11() {$/;"	f
+run_lua	test.sh	/^function run_lua() {$/;"	f
+run_test	test.sh	/^function run_test() {$/;"	f
+run_test_all	test.sh	/^function run_test_all() {$/;"	f
+scanner_next_token	scanner.c	/^bool scanner_next_token(Ttoken *token)$/;"	f
+scanner_special_words	scanner.c	/^void scanner_special_words(Ttoken *token, Tstring *id)$/;"	f
+set_error	main.c	/^bool set_error(enum ifj11_rt err)$/;"	f
+set_variable_type	parser.c	/^static void set_variable_type(Ttoken * token, enum var_type * type)$/;"	f	file:
+set_variable_val	parser.c	/^static void set_variable_val(Ttoken * token, union variable_val * val)$/;"	f	file:
+size	pstack.h	/^    int size;$/;"	m	struct:pstack
+sort 	TEST/ifj11.lua	/^function sort (s)$/;"	f
+src1	instruction.h	/^    union inst_operand src1;$/;"	m	struct:Tinstruction	typeref:union:Tinstruction::inst_operand
+src2	instruction.h	/^    union inst_operand src2;$/;"	m	struct:Tinstruction	typeref:union:Tinstruction::inst_operand
+stack	stack.c	/^} stack;$/;"	v	typeref:struct:__anon1	file:
+stack_destroy	stack.c	/^void stack_destroy(void)$/;"	f
+stack_init	stack.c	/^void stack_init(void)$/;"	f
+stack_pop	stack.c	/^Tinstruction * stack_pop(void)$/;"	f
+stack_push	stack.c	/^void stack_push(const Thtable_item * item)$/;"	f
+stack_set_rv	stack.c	/^void stack_set_rv(Tinstruction * inst)$/;"	f
+stat	parser.c	/^static bool stat(Ttoken * token)$/;"	f	file:
+stat_if_list	parser.c	/^static bool stat_if_list(union inst_operand if_end,$/;"	f	file:
+stat_list	parser.c	/^static bool stat_list(Ttoken * token)$/;"	f	file:
+stat_repeat_list	parser.c	/^static bool stat_repeat_list(Ttoken * token)$/;"	f	file:
+str	scanner.h	/^    char * str;$/;"	m	union:token_value
+str	str.h	/^  char* str;        \/\/ misto pro dany retezec ukonceny znakem '\\0'$/;"	m	struct:string
+str	variable.h	/^        char * str;$/;"	m	union:Tvariable::variable_val
+str_add_char	str.c	/^bool str_add_char(Tstring *s1, char c)$/;"	f
+str_clear	str.c	/^void str_clear(Tstring *s)$/;"	f
+str_cmp_const_str	str.c	/^int str_cmp_const_str(Tstring *s1, char* s2)$/;"	f
+str_cmp_string	str.c	/^int str_cmp_string(Tstring *s1, Tstring *s2)$/;"	f
+str_copy_string	str.c	/^bool str_copy_string(Tstring *s1, Tstring *s2)$/;"	f
+str_free	str.c	/^void str_free(Tstring *s)$/;"	f
+str_get_length	str.c	/^int str_get_length(Tstring *s)$/;"	f
+str_get_str	str.c	/^char *str_get_str(Tstring *s)$/;"	f
+str_init	str.c	/^bool str_init(Tstring *s)$/;"	f
+string	str.h	/^typedef struct string$/;"	s
+substr	TEST/ifj11.lua	/^function substr(str, i, j)$/;"	f
+symbol_table	parser.c	/^static Thtable * symbol_table = NULL;$/;"	v	file:
+syntax_directed_translation	parser.c	/^bool syntax_directed_translation()$/;"	f
+tab	instruction.h	/^    struct Thtable_item * tab;$/;"	m	union:inst_operand	typeref:struct:inst_operand::Thtable_item
+to_index	ial.c	/^static long int to_index(long int intpart_to, long int len)$/;"	f	file:
+to_small	is_it_ok.sh	/^function to_small () {$/;"	f
+token_id	scanner.h	/^enum token_id$/;"	g
+token_value	scanner.h	/^typedef union token_value$/;"	u
+top	pstack.h	/^    int top;$/;"	m	struct:pstack
+top	stack.c	/^    Tstack_item * top;$/;"	m	struct:__anon1	file:
+type	pstack.h	/^    enum pstack_item_type type;$/;"	m	struct:pstack_item	typeref:enum:pstack_item::pstack_item_type
+type	variable.h	/^    enum var_type type;$/;"	m	struct:Tvariable	typeref:enum:Tvariable::var_type
+uk	ial.h	/^    Thtable_item * uk[];$/;"	m	struct:Thtable
+unpack_archive	is_it_ok.sh	/^function unpack_archive () {$/;"	f
+up	fbuffer.c	/^    int up;                     \/* Horne ukazovatko do bufferu          *\/$/;"	m	struct:fbuffer_pool	file:
+val	scanner.h	/^    Ttoken_value val;$/;"	m	struct:Ttoken
+val	variable.h	/^    } val;$/;"	m	struct:Tvariable	typeref:union:Tvariable::variable_val
+var	ial.h	/^    struct Tvariable_list var;$/;"	m	struct:Thtable_item	typeref:struct:Thtable_item::Tvariable_list
+var	instruction.h	/^    struct Tvariable * var;$/;"	m	union:inst_operand	typeref:struct:inst_operand::Tvariable
+var	stack.h	/^    struct Tvariable_list var;$/;"	m	struct:Tstack_item	typeref:struct:Tstack_item::Tvariable_list
+var_list	parser.c	/^static bool var_list(Ttoken * token)$/;"	f	file:
+var_orig	stack.h	/^    struct Tvariable_list var_orig;$/;"	m	struct:Tstack_item	typeref:struct:Tstack_item::Tvariable_list
+var_type	variable.h	/^enum var_type {$/;"	g
+variable	pstack.h	/^    Tvariable * variable;$/;"	m	struct:pstack_item
+variable_copy	variable.c	/^void variable_copy(Tvariable * dst, const Tvariable * src)$/;"	f
+variable_create	variable.c	/^variable_create(char * name, enum var_type type, union variable_val val)$/;"	f
+variable_delete	variable.c	/^void variable_delete(Tvariable_list * list, Tvariable * var)$/;"	f
+variable_list_append	variable.c	/^void variable_list_append(Tvariable_list * list, Tvariable * var)$/;"	f
+variable_list_assign_del	variable.c	/^void variable_list_assign_del(Tvariable_list * dst, const Tvariable_list * src)$/;"	f
+variable_list_copy	variable.c	/^void variable_list_copy(Tvariable_list * dst, const Tvariable_list * src)$/;"	f
+variable_list_destroy	variable.c	/^void variable_list_destroy(Tvariable_list * list)$/;"	f
+variable_list_first	variable.c	/^Tvariable * variable_list_first(Tvariable_list * list)$/;"	f
+variable_list_init	variable.c	/^void variable_list_init(Tvariable_list * list)$/;"	f
+variable_list_look	variable.c	/^Tvariable * variable_list_look(const Tvariable_list * list, const char * name)$/;"	f
+variable_list_succ	variable.c	/^Tvariable * variable_list_succ(Tvariable_list * list)$/;"	f
+variable_val	variable.h	/^    union variable_val {$/;"	u	struct:Tvariable
+vod	DOC/dokumentace.tex	/^\\section{Úvod} \\label{uvod}$/;"	s
+w_arg	parser.c	/^static bool w_arg(Ttoken * token)$/;"	f	file:
+w_args_list	parser.c	/^static bool w_args_list(Ttoken * token)$/;"	f	file:
+write	TEST/ifj11.lua	/^function write(...)$/;"	f
+xcalloc	xwrappers.c	/^void * xcalloc(size_t size, size_t size_type)$/;"	f
+xerror	xwrappers.c	/^void xerror(const char *fmt, ...)$/;"	f
+xerror_error	xwrappers.h	/^enum xerror_error$/;"	g
+xerror_msg	xwrappers.c	/^void xerror_msg(enum xerror_error err)$/;"	f
+xerror_str	xwrappers.c	/^static const char * xerror_str[] = {$/;"	v	file:
+xfree	xwrappers.c	/^void xfree(void * ptr)$/;"	f
+xmalloc	xwrappers.c	/^void * xmalloc(size_t size)$/;"	f
+xwarning_msg	xwrappers.c	/^void xwarning_msg(enum xwarning_warning war)$/;"	f
+xwarning_str	xwrappers.c	/^static const char * xwarning_str[] = {$/;"	v	file:
+xwarning_warning	xwrappers.h	/^enum xwarning_warning$/;"	g
+zpracuj_fce	TEST/0008/T_program.lua	/^function zpracuj_fce(func,min,max,step)$/;"	f

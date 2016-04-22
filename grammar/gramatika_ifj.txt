@@ -1,0 +1,48 @@
+<prog>          =>      <df-list>   <eof>
+<df-list>       =>      FUNCTION ID (   <param-list>    <var-list>
+<param-list>    =>      )
+<param-list>    =>      ID  <param>
+<param>         =>      ,   ID  <param>
+<param>         =>      )
+<var-list>      =>      LOCAL   ID  <dclr-type> <var-list>
+<var-list>      =>      <stat-list>
+<dclr-type>     =>      ;
+<dclr-type>     =>      =   <literal>   ;
+<stat-list>     =>      <stat>  ;   <stat-list>
+<stat-list>     =>      END <end>
+<end>           =>      ;
+<end>           =>      <df-list>
+<stat>          =>      ID  =   <rfe>
+<stat>          =>      WRITE   (   <w-args-list>
+<stat>          =>      RETURN  <expr>
+<stat>          =>      WHILE   <expr>  DO  <stat-list>
+<stat>          =>      IF      <expr>  THEN    <stat-if-list>
+<stat-if-list>  =>      <stat> ; <stat-if-list>
+<stat-if-list>  =>      ELSE    <stat-list>
+<w-args-list>   =>      )
+<w-args-list>   =>      <expr>  <w-arg>
+<w-arg>         =>      ,   <expr>  <w-arg>
+<w-arg>         =>      )
+<rfe>           =>      READ    (   <read-format>   )
+<rfe>           =>      ID  <fe>
+<fe>            =>      <expr>
+<fe>            =>      (   <args-list>
+<args-list>     =>      )
+<args-list>     =>      <lit-or-id> <arg>
+<arg>           =>      ,   <lit-or-id>   <arg>
+<arg>           =>      )
+<lit-or-id>     =>      ID
+<lit-or-id>     =>      <literal>
+<literal>       =>      TKN_NUM
+<literal>       =>      TKN_STR
+<literal>       =>      TKN_BOOL
+<literal>       =>      TKN_NIL
+<read-format>   =>      TKN_STR
+<read-format>   =>      TKN_NUM
+<eof>           =>      TKN_EOF
+<expr>          =>      PSA
+
+NETERMINALY:
+<prog>, <df-list>, <eof>, <param-list>, <param>, <var-list>, <dclr-type>,
+<stat-list>, <literal>, <end>, <stat>, <rfe>, <read-format>, <fe>, <expr>,
+<args-list>, <arg>, <lit-or-id>, <w-args-list>, <w-arg>, <stat-if-list>

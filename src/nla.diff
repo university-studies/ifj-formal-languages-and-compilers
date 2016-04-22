@@ -1,0 +1,106 @@
+Index: xwrappers.h
+===================================================================
+--- xwrappers.h	(revision 220)
++++ xwrappers.h	(working copy)
+@@ -74,6 +74,8 @@
+     ERR_SEM_BAD_CMP,
+     ERR_SEM_DIFF_CMP,
+     ERR_SEM_BAD_ARITH_OP,
++    ERR_SEM_READ_OP,
++
+     /*
+      * Zoznam chyb interpretru.
+      */
+Index: TEST/1001/T_program.lua
+===================================================================
+--- TEST/1001/T_program.lua	(revision 220)
++++ TEST/1001/T_program.lua	(working copy)
+@@ -50,7 +50,7 @@
+          while false
+      do write	("10");
+ end;
+-    --read("*n");
+-    --if false then return; end;
++    a = read("*n");
++    if false then return 2; end;
+     if true then write( "bla");
+     end;end;end;
+Index: TEST/0012/T_return
+===================================================================
+--- TEST/0012/T_return	(revision 220)
++++ TEST/0012/T_return	(working copy)
+@@ -1 +1 @@
+-0
++3
+Index: buildin.c
+===================================================================
+--- buildin.c	(revision 220)
++++ buildin.c	(working copy)
+@@ -161,12 +161,12 @@
+     {
+         if (item->val.num < 0)
+         {
+-            dst->type = VAR_NIL;
+-            return true;
++            xerror_msg(ERR_SEM_READ_OP);
++            return set_error(RET_ERR_SEM);
+         }
+ 
+         str_init(&str);
+-        for (unsigned i = 0; i < item->val.num; ++i)
++        for (unsigned i = 0; i < (unsigned) item->val.num; ++i)
+         {
+             c = getchar();
+             if (c != EOF)
+@@ -179,7 +179,7 @@
+     else if (item->type == VAR_STR)
+     {
+         str_init(&str);
+-        if (! strcmp(item->val.str, READ_NUM))
++        if (! strncmp(item->val.str, READ_NUM, 2))
+         {
+             int i = scanf("%lf", &dst->val.num);
+             if (i != 1 || isnan(dst->val.num) || isinf(dst->val.num))
+@@ -189,7 +189,7 @@
+             else
+                 dst->type = VAR_NUM;
+         }
+-        else if (! strcmp(item->val.str, READ_STR_LF))
++        else if (! strncmp(item->val.str, READ_STR_LF, 2))
+         {
+             str_clear(&str);
+             while ((c = getchar()) != '\n' && c != EOF)
+@@ -198,7 +198,7 @@
+             dst->type = VAR_STR;
+             dst->val.str = str.str;
+         }
+-        else if (! strcmp(item->val.str, READ_STR_EOF))
++        else if (! strncmp(item->val.str, READ_STR_EOF, 2))
+         {
+             str_clear(&str);
+             while ((c = getchar()) != EOF)
+@@ -209,9 +209,10 @@
+         else
+         {
+             /*
+-             * Chybny parameter, vraciam nil.
++             * Chybny parameter read je semanticka chyba
+              */
+-            dst->type = VAR_NIL;
++            xerror_msg(ERR_SEM_READ_OP);
++            return set_error(RET_ERR_SEM);
+         }
+     }
+     else
+Index: xwrappers.c
+===================================================================
+--- xwrappers.c	(revision 220)
++++ xwrappers.c	(working copy)
+@@ -72,6 +72,7 @@
+     [ERR_SEM_BAD_CMP]       = "sem: comparing bad types\n",
+     [ERR_SEM_DIFF_CMP]      = "sem: comparing different types\n",
+     [ERR_SEM_BAD_ARITH_OP]  = "sem: bad arithmetic operands\n",
++    [ERR_SEM_READ_OP]       = "sem: bad read operand\n",
+ 
+     [ERR_INT_NUM_RANGE]     = "int: numeric variable out of range\n",
+     [ERR_INT_READ_NUM]      = "int: no input to be read\n",

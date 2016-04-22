@@ -1,0 +1,148 @@
+                                DISCLAIMER
+                                ==========
+SKUTOCNE ODPORUCAM (HLAVNE NA ZACIATKU PROJEKTU, ALE AJ PRIEBEZNE) KONTROLOVAT,
+
+ CI SKRIPT VYHODNOCUJE TESTY SPRAVNE A PRIPADNE CHYBY REPORTOVAT DO REDMINE.
+
+            JE TO LEN SW A CHYBY SA V NOM URCITE NACHADZAJU.
+
+(a tie kecy, ze autor nie je zodpovedny za nespravne pouzitie a nenesie ziadnu
+zodpovednost za pripadne skody sposobene pouzivanim si domyslite :P )
+
+SKRIPT test.sh
+==============
+
+V adresari ifj11/ sa nachadza bash skript test.sh, ktory umoznuje spustenie
+prislusneho testu a zistenie jeho vysledku. Pre napovedu spustite
+`./test.sh -h' pripadne `./test.sh --help'.
+
+Pre samotne spustenie musi mat test.sh execute bit. Nastavite ho pomocou:
+
+$ chmod +x test.sh
+
+Skript hlada v adresari ifj11 binarku ifj11 alebo ifj11-debug, pricom prednost
+je dana binarke ifj11-debug (testovanie aj s run.log)
+
+TESTOVANIE
+==========
+
+Spustenim `./test.sh -h' alebo `./test.sh --help' v adresari ifj11/ sa zobrazi
+napoveda spojena s testovacim skriptom. Pre uskutocnenie testu, zadajte (tak
+ako je v napovede uvedene) `./test.sh -t TEST1 TEST2 TEST3', pricom pocet
+testov musi byt aspon 1 (umoznuje teda prevedenie viacero testov, pripadne
+vsetkych zadanim `./test.sh -a' alebo `./test.sh --all'). Skript vypise
+len najzakladnejsie informacie spojene s testom a to napriklad:
+
+$ ./test.sh --test 1
+################################
+> Executing test 1.
+= return value:         OK/FAILED
+= stderr:               OK/FAILED
+= stdout:               OK/FAILED
+= valgrind:             OK/DISABLED/FAILED
+================================
+= TEST RESULT:          PASSED/FAILED
+
+OK          - dany test bol uspesny (napriklad navratova hodnota je podla
+              ocakavania)
+FAILED      - dany test bol neuspesny (napriklad program nic nevypisal na
+              stderr
+              pricom bolo ocakavane, ze chyba bude vypisana)
+DISABLED    - nebol uskutocneny test na valgrind (memory leaky a pod.)
+TEST RESULT - v pripade, ze vsetky testy su uspesne (test na valgrind v
+              pripade DISABLED sa nepocita za neuspech) je PASSED
+
+INFORMACIE O TESTE
+==================
+
+Pokial ste uz test vykonali, pripadne chcete vidiet, co test obsahuje a co
+testuje (samozrejme je mozne priamo nahliadnut do prislusneho adresara v
+ifj11/TEST/), je mozne vypisat informacie o teste. Naviac pri vypisovani
+sa kontroluje spravnost testu, takze je odporucane po napisani testu
+nechat si vypisat informacie o teste, ci skript je schopny spravne test
+interpretovat. Podobne ako u prepinaca -t (--test) je mozne vypisat informacie
+o viacero testoch.
+
+Informacie o teste je mozne zapnut prepinacom -i (alebo --info) a nasledne
+nazov testu, napr.:
+
+$ ./test.sh -i 1
+################################
+= TEST 1:
+Test na prazdny vstup.
+= return value:         0
+= test return value:    0
+= stderr:               NONE
+= test stderr:          NONE
+= stdout:               NONE
+= test stdout:          NONE
+= stdout diff:
+= stdin:
+= debug test messages:  DISABLED
+= valgrind:             DISABLED
+--------------------------------
+= return value:         OK
+= stderr:               OK
+= stdout:               OK
+= valgrind:             DISABLED
+================================
+= TEST RESULT:          PASSED =
+
+Jednotlive moznosti:
+
+return value            - cislo navratovej hodnoty z main
+stderr: NONE/EXPECTED   - vystup na stderr (nie)je pozadovany od programu ifj11
+stdout: NONE/_vypis_    - obsahuje hodnotu NONE, pripadne vypise cely obsah
+                          stdout, ktory bol pri teste
+stdout diff             - vypise diff nad ocakavanym a ziskanym vystupom
+stdin:                  - cely vstup programu
+debug test messages: DISABLED/_vypis_   - vypise obsah suboru run.log
+                                          (pri ifj11-debug)
+valgrind: DISABLED/_vypis_              - vypise spravy z valgrindu, ak existuju
+
+Pri vypisani bez klucoveho slova test, ide o hodnotu, ktora je pozadovana z
+testu, s klucovym slovom test je uz vysledok testu. Teda napriklad
+`return value: 0' znamena, ze test ocakava rv 0, a `test return value: 0'
+znamena, ze test vratil 0.
+
+Pri prepinaci -i resp. --info sa test neprevadza, len sa zobrazuju jednotlive
+vysledky. Ak test predtym nebol spusteny (pomocou -t resp. --test), vypisu
+sa hodnoty UNKNOWN pri pozadovanych suboroch.
+
+Prepinacom -l, pripadne --lua a naslednym zadanim nazvov testov sa spusti
+interpreter Lua, ktory je nainstalovany v systeme nad zadanymi testmi.
+
+PISANIE TESTOV
+==============
+
+Testy sa nachadzaju v adresari ifj11/TEST. Kazdy test je umiestneny do adresara
+(najlepsie poradove cislo, aby sme sa lepsie orientovali, meno pre istotu bez
+medzier - nerucim za quoting v test.sh O:-) ) a obsahuje nasledovne textove
+subory (nutna sucast testu):
+
+* T_return    - obsahuje cislo, ktore ma vratit ifj11. V pripade uspechu 0 atd.
+* T_stderr    - ak ma byt nieco vytlacene na stderr, bude obsahovat znak '*',
+                inac bude prazdny (standardne \nEOF)
+* T_stdout    - obsahuje standardny vystup. Ak ma byt prazdny, tak je aj
+                subor prazdny
+* T_info      - slovny popis testu pre uchovanie informacii - preco, naco, co
+                sa testuje, ...
+* T_stdin     - samotny test, cize vstup programu
+* T_param     - parametre programu
+* T_program.lua - program v jazyku Lua (nacitat je nutne v T_param)
+
+Po uskutocneni testu sa v prislunom adresari testu vytvoria nasledovne subory:
+
+* return        - skutocna hodnota vratena programom po uskutocneni testu
+* stderr        - obsah standardneho chyboveho vystupu po uskutocneni testu
+* stdout        - standardny vystup testu
+* valgrind      - informacie spojene s valgrindom
+* run.log       - ak bol test spusteny s binarkou, ktora podporuje debug mod,
+                  nachadzaju sa tu informacie, ktore boli do tohto suboru
+                  zapisane
+
+Pokial ste test vytvorili alebo uskutocnili, prosim neposielajte do repozitara
+subory, ktore nie su beznou sucastou zakladneho testu. Pokial chcete zverejnit
+vysledky testu, prosim ucinte tak v redmine. Neposielajte teda subory, ktore
+nemaju prefix T_ do repozitara.
+

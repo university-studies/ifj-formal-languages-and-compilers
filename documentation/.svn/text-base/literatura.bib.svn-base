@@ -1,0 +1,31 @@
+
+%\begin{thebibliography}{1}
+%MEDUNA, Alexander; LUKAŠ, Roman. \emph{Formální jazykuu a překladače} : Studíjni
+%opora., 2006 + revize 2009--2010. 152 s. \label{[1]}            \\
+%
+%KŘOUSTEK, Jakub; KŘIVKA, Zbyněk; VRÁBEL, Lukáš. \emph{Zadání projektu z předmětu
+%IFJ a IAL}., 26.09.2011. 17 s. \label{[2]}      \\
+%\end{thebibliography}
+%\newpage
+
+@MasterThesis{meduna:opora,
+ author = "Meduna, Alexander and Lukáš, Roman",
+ title = "Formální jazykuu a~překladače",
+ type = "Studijní opora",
+ address = "Brno",
+ school = "Vysoké uční technické",
+ year = "2006",
+ revised = "2010",
+ pages = "152",
+}
+
+
+@Misc{zadanie,
+ author = "Křoustek, Jakub and Křivka, Zbiněk and Vrábel, Lukáš",
+ title = "Zadání projektu z~předmětu IFJ a~IAL",
+ address = "Brno",
+ year = "2011",
+ month = "9",
+ pages = "17",
+}
+
